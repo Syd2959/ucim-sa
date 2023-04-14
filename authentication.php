@@ -1,6 +1,6 @@
 <?php   
 
-    //if ($_SERVER["REQUEST_METHOD"] == "POST") { // zistíme, či bola požiadavka odoslaná metódou POST
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { // zistíme, či bola požiadavka odoslaná metódou POST
 
         $username = isset($_POST['username']) ? $_POST['username'] : 'hovno';
         $loginpassword = isset($_POST['password']) ? $_POST['password'] : 'hovno';
@@ -15,8 +15,8 @@
         } else {
         echo 'Nesprávne používateľské meno alebo heslo.'; // Odpoveď pre neúspešnú autentifikáciu
         }
-//} else {
+} else {
     //echo 'Neplatný požiadavok.'; // Odpoveď pre neplatnú požiadavku
-//}
+}
        
 ?>
